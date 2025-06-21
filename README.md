@@ -1,3 +1,4 @@
+THIS IS BROKEN DO NOT USE
 # PrettyPictures GitHub Pages Setup
 
 A simple static image gallery for showcasing PNG flyers stored in this repository. This README explains how to preview locally and publish via GitHub Pages.
