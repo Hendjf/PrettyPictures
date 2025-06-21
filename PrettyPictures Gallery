@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PrettyPictures Gallery</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 1rem; max-width: 960px; margin: auto; }
+    h1 { text-align: center; }
+    .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem; }
+    .gallery img { width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.2); }
+  </style>
+</head>
+<body>
+  <h1>PrettyPictures Gallery</h1>
+  <p>Welcome to the PrettyPictures showcase! Add your image files into the <code>images/</code> folder and update the <code>images</code> array below.</p>
+
+  <div class="gallery" id="gallery"></div>
+
+  <script>
+    // List your image filenames here (relative to this HTML file)
+    const images = [
+      'images/Game_Night_1.png',
+      'images/Town_Hall_Flyer.png',
+      'images/Weekly_Social_Flyer.png'
+    ];
+
+    const container = document.getElementById('gallery');
+    images.forEach(src => {
+      const img = document.createElement('img');
+      img.src = src;
+      img.alt = src.split('/').pop();
+      container.appendChild(img);
+    });
+  </script>
+</body>
+</html>
+
